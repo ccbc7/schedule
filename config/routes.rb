@@ -1,3 +1,12 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources:plans
+  get 'users/index'
+  get 'lessons/hello' => 'lessons#hello'
+  get 'lessons/call', to: 'lessons#call'
+
+
+  get 'plans/index'
+  resources:users
+
+
 end
